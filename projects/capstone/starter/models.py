@@ -11,7 +11,7 @@ DB_HOST = os.getenv('DB_HOST', 'localhost:5432')
 DB_USER = os.getenv('DB_USER', 'postgres')  
 DB_PASSWORD = os.getenv('DB_PASSWORD', '123321')  
 DB_NAME = os.getenv('DB_NAME', 'finalproject')  
-DB_PATH = 'postgresql+psycopg2://{}:{}@{}/{}'.format(DB_USER, DB_PASSWORD, DB_HOST, DB_NAME)
+DB_PATH = os.environ['DATABASE_URL']#'postgresql+psycopg2://{}:{}@{}/{}'.format(DB_USER, DB_PASSWORD, DB_HOST, DB_NAME)
 db = SQLAlchemy()
 
 '''
